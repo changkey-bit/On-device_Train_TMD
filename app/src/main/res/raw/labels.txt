@@ -1,0 +1,5 @@
+Walking
+Still
+Bus
+SubWay
+Car
