@@ -1,25 +1,32 @@
-# On-device Transportation Mode Detection(TMD) with Train 
+# On-device Transportation Mode Detection (TMD) with Train  
 
-## 이동수단 데이터 수집 및 실시간 추론
+---
+
+## 🚆 이동수단 데이터 수집 및 실시간 추론
 <img src="https://github.com/user-attachments/assets/29c5c5f0-5399-475b-ac1e-6a4222635e5d">
 
-## 수집된 데이터 활용 실시간 On-device 학습
+---
+
+## 📡 수집된 데이터 기반 실시간 On-device 학습
 <img src="https://github.com/user-attachments/assets/388501bd-d59b-46fd-9564-1c9e4480df5a">
 
 ---
 
 ## 📑 프로젝트 소개
-### 👤 User - LLM 상담 애플리케이션
-- LLM 기반 상담가를 통한 고민 상담 앱 구현
+### 👤 실시간 이동수단 탐지 및 On-device 학습 애플리케이션
+- 스마트폰 내 IMU 센서 및 GPS 데이터를 활용하여 **버스, 지하철, 자동차, 도보, 정지 등** 다양한 이동수단을 실시간으로 탐지
+- 서버 의존도를 최소화하고 **On-device 모델 학습 및 추론**을 통해 개인정보 보호와 네트워크 독립성을 강화
 
 > **특징**  
-> - On-device LLM을 적용하여 민감한 개인정보 유출 방지  
-> - 프롬프트를 통해 상담가 역할을 명확히 부여
+> - IMU 센서(가속도계, 자이로스코프, 자기장 센서)와 GPS 데이터를 통합한 **멀티모달 입력 기반 탐지 모델**  
+> - TensorFlow Lite 기반 **경량화 CNN 모델**로 스마트폰에서 실시간 추론 가능  
+> - 실시간 데이터 수집 후 즉시 On-device 학습 가능, **개인 맞춤형 탐지 정확도 향상**  
+> - 네트워크 연결 없이도 안정적으로 동작하여 **오프라인 환경에서도 사용 가능**  
 
 ---
 
 ## 🛠 사용 기술 스택
-- **Android** : Kotlin  
-- **Model** : Gemma3-1B-it-int4.task  
-- **Design** : Canva  
-- **Prompt 예시**  
+- **Android** : Java  
+- **Model** : Multi-input CNN (TensorFlow, TensorFlow Lite)  
+- **Data** : IMU 센서(3축 가속도계, 3축 자이로스코프, 자기장 센서), GPS  
+- **Processing** : 실시간 윈도우링, z-score 정규화, 센서 피처 추출  
