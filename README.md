@@ -1,4 +1,4 @@
-# On-device Transportation Mode Detection (TMD) with Train  
+# On-device Transportation Mode Detection (TMD)  
 
 ---
 
